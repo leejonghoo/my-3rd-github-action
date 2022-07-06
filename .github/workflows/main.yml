@@ -23,3 +23,14 @@ jobs:
       - name: python command
         run: |
           python --version
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simple JS Axtion
+        id: greet
+        uses: actions/hello-world-javascript-action@main # ← main은 브랜치 이름입니다. tag이름이 올수도 있어요. v1 등?
+        with:
+          who-to-greet: "Macbook pro"
+      - name: Log Greeting Time
+        run: echo "${{ steps.greet.outputs.time }}"
+
