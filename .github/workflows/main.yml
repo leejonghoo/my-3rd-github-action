@@ -38,6 +38,8 @@ jobs:
   pwd-ls:
       runs-on: ubuntu-latest
       steps:
+        - name: checkout
+          uses: actions/checkout@v1
         - name: pwd-ls
           run: |
             pwd # 현재 경로 보는거
