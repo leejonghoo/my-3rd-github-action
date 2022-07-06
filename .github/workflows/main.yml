@@ -9,6 +9,9 @@ on: # event
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+schedule:
+  - cron: "*/5 * * * *"
+
 jobs:
   test-shell-command:
     name: test-shell-command
